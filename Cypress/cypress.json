@@ -1,1 +1,7 @@
-{}
+{
+    "screenshotsFolder": "Cypress/videos",
+    "videosFolder": "Cypress/screenshots",
+    "baseUrl": "https://shop.1-ofd.ru/collection/all",
+    "viewportWidth": 1280,
+    "viewportHeight": 1024
+}
