@@ -16,5 +16,12 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+Cypress.Server.defaults({
+    delay: 500,
+    force404: false,
+    ignore: (xhr) => {
+        return xhr.method === 'POST' && ' https://mc.yandex.ru/webvisor/*';
+    }
+})
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
