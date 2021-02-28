@@ -9,23 +9,23 @@ public class TestPlan {
     CatalogPage catalogPage = new CatalogPage(driver);
 
     @BeforeSuite
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
     @Test(testName = "Checks all checkboxes")
-    public void CheckBoxesTest() {
+    private void CheckBoxesTest() {
         driver.get(Utils.BASE_URL);
         catalogPage.CheckBoxesValidation();
     }
 
     @Test(testName = "Filters by fiscal storage device")
-    public void FilterFiscal(){
+    private void FilterFiscal(){
         catalogPage.FilterFirstItem();
     }
 
     @AfterSuite
-    public static void Quit(){
+    private static void Quit(){
         driver.manage().deleteAllCookies();
         driver.close();
     }
